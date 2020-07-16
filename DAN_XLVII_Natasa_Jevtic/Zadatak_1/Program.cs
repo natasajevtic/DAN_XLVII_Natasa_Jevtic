@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Threading;
 
 namespace Zadatak_1
@@ -37,6 +38,8 @@ namespace Zadatak_1
         }
         static void Main(string[] args)
         {
+            Stopwatch stopWatch = new Stopwatch();
+            stopWatch.Start();
             CreateVehicle();
             //delegate points to the Notify method
             Notification notification = Notify;
@@ -58,6 +61,11 @@ namespace Zadatak_1
             {
                 threadsForVehicle[i].Join();
             }
+            stopWatch.Stop();
+            //getting the elapsed time as a TimeSpan value
+            TimeSpan ts = stopWatch.Elapsed;
+            Console.WriteLine("Application duration: {0} ms", ts.Milliseconds);
+            Console.ReadKey();
         }
     }
 }
