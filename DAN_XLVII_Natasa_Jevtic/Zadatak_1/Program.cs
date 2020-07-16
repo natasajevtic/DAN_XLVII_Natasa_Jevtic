@@ -64,7 +64,7 @@ namespace Zadatak_1
             stopWatch.Stop();
             //getting the elapsed time as a TimeSpan value
             TimeSpan ts = stopWatch.Elapsed;
-            Console.WriteLine("Application duration: {0} ms", ts.Milliseconds);
+            Console.WriteLine("Application duration: {0} ms", ts.TotalMilliseconds);
             Console.ReadKey();
         }
     }

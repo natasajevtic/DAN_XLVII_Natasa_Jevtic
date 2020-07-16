@@ -67,9 +67,10 @@ namespace Zadatak_1
         /// </summary>
         public void CrossTheBridge()
         {
-            Thread.Sleep(500);
-            Console.WriteLine("{0}. vehicle has crossed the bridge in the direction of the {1}.", Number, Direction);
+            Console.WriteLine("{0}. vehicle is crossing the bridge in the direction of the {1}.", Number, Direction);
             canCross.Set();
+            Thread.Sleep(500);
+            Console.WriteLine("{0}. vehicle has crossed the bridge in the direction of the {1}.", Number, Direction);            
         }
     }
 }
